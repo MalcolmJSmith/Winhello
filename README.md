@@ -1,7 +1,7 @@
 Winhello
 ========
 
-An example Windows GUI hello world application.
+An example Go Windows GUI hello world application.
 
 Linker options
 --------------
