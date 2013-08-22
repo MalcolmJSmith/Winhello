@@ -87,7 +87,7 @@ func WinMain(hInstance, hPrevInstance uintptr, szCmdLine string, iCmdShow int) i
 
 	// Initialise window class
 	wndClass := new(WNDCLASSEX)
-	wndClass.cbSize = uint(unsafe.Sizeof(*wndClass))
+	wndClass.cbSize = uint32(unsafe.Sizeof(*wndClass))
 	wndClass.style = CS_HREDRAW | CS_VREDRAW
 	wndClass.lpfnWndProc = syscall.NewCallback(WndProc)
 	wndClass.cbClsExtra = 0

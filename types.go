@@ -2,11 +2,11 @@ package main
 
 // Windows Types
 type WNDCLASSEX struct {
-	cbSize        uint
-	style         uint
+	cbSize        uint32
+	style         uint32
 	lpfnWndProc   uintptr
-	cbClsExtra    int
-	cbWndExtra    int
+	cbClsExtra    int32
+	cbWndExtra    int32
 	hInstance     uintptr
 	hIcon         uintptr
 	hCursor       uintptr
@@ -18,30 +18,30 @@ type WNDCLASSEX struct {
 
 type POINT struct {
 	X,
-	Y int
+	Y int32
 }
 
 type RECT struct {
 	Left,
 	Top,
 	Right,
-	Bottom int
+	Bottom int32
 }
 
 type MSG struct {
 	Hwnd    uintptr
-	Message uint
+	Message uint32
 	WParam  uintptr
 	LParam  uintptr
-	Time    uint
+	Time    uint32
 	Pt      POINT
 }
 
 type PAINTSTRUCT struct {
 	hdc         uintptr
-	fErase      int
+	fErase      int32
 	rcPaint     RECT
-	fRestore    int
-	fIncUpdate  int
+	fRestore    int32
+	fIncUpdate  int32
 	rgbReserved [32]byte
 }
